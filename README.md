@@ -23,14 +23,35 @@ Dengan deskripsi sebagai berikut:
 - Fitur: `amount`, `oldbalanceOrg`, `newbalanceOrig`, `isFraud`, `type` 
 
 ### Struktur File
-
+```
+tugas-klp-kafka/
+│
+├── docker-compose.yml
+├── Dockerfile
+├── app/
+│   ├── producer.py
+│   ├── consumer.py
+│   ├── train_model.py
+│   └── api.py
+├── batch/         # Hasil dari consumer
+├── models/        # Hasil model dari Spark
+├── dataset/
+│   └── PS_20174392719_1491204439457_log.csv
+```
 
 run `producer.py`
 
 ![image](https://github.com/user-attachments/assets/237ef27a-0ab5-449a-ac94-491c24435a4b)
 
+![image](https://github.com/user-attachments/assets/278b0f71-055a-4f32-a232-a0dbb695914e)
+
+
 run `customer.py`
 
 ![image](https://github.com/user-attachments/assets/a64be2ea-84f0-434f-80a5-ee88d2389c29)
+
+![image](https://github.com/user-attachments/assets/c96e3339-c4d3-4c9f-b8f4-d9d9821440f1)
+
+![image](https://github.com/user-attachments/assets/f311bb07-17c4-4a9a-884d-c58e460f5d25)
 
 
