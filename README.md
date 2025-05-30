@@ -13,45 +13,73 @@ Terdapat sebuah sistem Big Data dengan arsitektur seperti gambar di atas. Sistem
 
 ## Dataset
 Dataset yang kami gunakan terdapat pada link dibawah ini:
-[Synthetic Financial Datasets For Fraud Detection 
-](https://www.kaggle.com/datasets/ealaxi/paysim1) 
+[Road Accident (United Kingdom (UK)) Dataset
+](https://www.kaggle.com/datasets/devansodariya/road-accident-united-kingdom-uk-dataset) 
 
-Dataset tersebut membahas tentang PaySim yang mensimulasikan transaksi uang seluler berdasarkan sampel transaksi yang diambil dari catatan keuangan selama satu bulan dari layanan uang seluler yang diterapkan di negara Afrika. Catatan asli disediakan oleh perusahaan multinasional, yang merupakan penyedia layanan keuangan seluler yang saat ini beroperasi di lebih dari 14 negara di seluruh dunia.
-Dengan deskripsi sebagai berikut:
-- Jumlah record: 6,3 juta (dapat di-sampling menjadi 1,5–3 juta)
-- Ukuran: ~200 MB
-- Fitur: `amount`, `oldbalanceOrg`, `newbalanceOrig`, `isFraud`, `type` 
+**Deskripsi**
+
+Pemerintah Inggris mengumpulkan data kecelakaan lalu lintas dari tahun 2000 hingga 2018, mencatat lebih dari 1,8 juta kecelakaan. Ini menjadikan dataset ini salah satu yang paling komprehensif terkait kecelakaan lalu lintas, memberikan gambaran besar tentang perubahan yang terjadi di negara tersebut selama hampir dua dekade.
+
+**Isi Dataset**
+
+Dataset ini terdiri dari 1 file CSV utama yang berisi data kecelakaan. Setiap kecelakaan direferensikan dengan Accident_Index yang bisa digunakan untuk menghubungkan data korban dan kendaraan (jika tersedia di tabel terpisah). Namun, dalam set ini hanya tersedia data utama kecelakaan.
+
+**Deskripsi Fitur**
+
+Dataset ini memiliki 33 fitur (kolom) dan lebih dari 1,8 juta baris data. Beberapa fitur utama yang tersedia antara lain:
+`Longitude / Latitude: Lokasi kecelakaan`
+
+`Accident_Severity: Tingkat keparahan kecelakaan (skala 1 sampai 5)`
+
+`Number_of_Vehicles: Jumlah kendaraan yang terlibat`
+
+`Number_of_Casualties: Jumlah korban dalam kecelakaan`
+
+`Light_Conditions: Kondisi pencahayaan saat kecelakaan`
+
+`Weather_Conditions: Kondisi cuaca saat kecelakaan`
+
+`Road_Surface_Conditions: Kondisi permukaan jalan di lokasi kecelakaan`
+
+`Year: Tahun terjadinya kecelakaan`
 
 ### Struktur File
 ```
-tugas-klp-kafka/
+bigdata-project-2/
+├── api/
+│   └── app.py                  # REST API (Flask/FastAPI), load & serve model
 │
-├── docker-compose.yml
-├── Dockerfile
-├── app/
-│   ├── producer.py
-│   ├── consumer.py
-│   ├── train_model.py
-│   └── api.py
-├── batch/         # Hasil dari consumer
-├── models/        # Hasil model dari Spark
-├── dataset/
-│   └── PS_20174392719_1491204439457_log.csv
+├── batch_data/                
+│   └── ...
+│
+├── consumer/
+│   └── kafka_consumer.py      # Listen dari Kafka dan bisa simpan ke file / call training
+│
+├── models/                    # Directory untuk simpan model hasil training
+│   └── model_1.pkl
+│   └── model_2.pkl
+│   └── ...
+│
+├── producer/
+│   └── kafka_producer.py      # Streaming data ke Kafka
+│
+├── spark/
+│   └── spark_training.py      # Training model Spark dari data stream / file
+│
+├── UK_Accident.csv            # Dataset
+├── requirements.txt           # Python dependencies
+├── Docker-compose.yml         # Docker compose untuk Zookeeper, Kafka, Spark
+├── README.md
+
 ```
 
 run `producer.py`
 
-![image](https://github.com/user-attachments/assets/237ef27a-0ab5-449a-ac94-491c24435a4b)
+![image](https://github.com/user-attachments/assets/4199e8b6-5cb7-4f76-9cf0-b35eaf8e4f87)
 
-![image](https://github.com/user-attachments/assets/278b0f71-055a-4f32-a232-a0dbb695914e)
 
 
 run `customer.py`
 
-![image](https://github.com/user-attachments/assets/a64be2ea-84f0-434f-80a5-ee88d2389c29)
-
-![image](https://github.com/user-attachments/assets/c96e3339-c4d3-4c9f-b8f4-d9d9821440f1)
-
-![image](https://github.com/user-attachments/assets/f311bb07-17c4-4a9a-884d-c58e460f5d25)
 
 
