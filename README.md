@@ -82,4 +82,7 @@ run `producer.py`
 run `customer.py`
 
 
+hasil modeling
+
+![image](https://github.com/user-attachments/assets/02c34a79-884e-4436-bcb0-50197d3ac7ec)
 
