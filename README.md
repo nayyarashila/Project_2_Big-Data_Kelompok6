@@ -82,6 +82,15 @@ run `producer.py`
 run `customer.py`
 
 
+dokumentasi modeling
+
+![image](https://github.com/user-attachments/assets/ecb6e56f-87b9-4c9a-9872-1f170e53f898)
+
+
+![image](https://github.com/user-attachments/assets/7a842cfd-b927-4fdf-b4cb-785cb078119d)
+
+
+
 hasil modeling
 
 ![image](https://github.com/user-attachments/assets/02c34a79-884e-4436-bcb0-50197d3ac7ec)
