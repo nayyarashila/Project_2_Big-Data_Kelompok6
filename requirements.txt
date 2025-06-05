@@ -1,0 +1,8 @@
+kafka-python
+fastapi
+uvicorn
+pandas
+pyspark
+pydantic
+scikit-learn
+

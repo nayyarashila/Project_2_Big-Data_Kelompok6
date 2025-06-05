@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1749062999521,"sparkVersion":"3.5.0","uid":"StringIndexer_b3b22d1bbde2","paramMap":{"inputCol":"Accident_Severity","outputCol":"label"},"defaultParamMap":{"stringOrderType":"frequencyDesc","handleInvalid":"error","outputCol":"StringIndexer_b3b22d1bbde2__output"}}
