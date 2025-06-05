@@ -95,3 +95,42 @@ hasil modeling
 
 ![image](https://github.com/user-attachments/assets/02c34a79-884e-4436-bcb0-50197d3ac7ec)
 
+
+## Dokumentasi API
+
+![image](https://github.com/user-attachments/assets/a0deedd1-6333-4a5f-b2ed-d54452c24a66)
+
+1. POST ke `/predict/severity`
+```
+{
+  "Number_of_Vehicles": 3,
+  "Number_of_Casualties": 2
+}
+```
+
+![image](https://github.com/user-attachments/assets/6c426b68-5958-4497-9b6d-e2e46f230f49)
+
+2. POST ke `/predict/cluster`
+
+![image](https://github.com/user-attachments/assets/db1b2d64-4448-417b-b999-c794d0aa7b04)
+
+
+```
+{
+  "Vehicles": 90,
+  "Casualties": 6
+}
+```
+
+3.  POST ke `/predict/severity_value`
+
+![image](https://github.com/user-attachments/assets/08584bf3-859d-4945-bd5f-f481d75b5b06)
+
+```
+{
+  "Number_of_Vehicles": 4,
+  "Number_of_Casualties": 1
+}
+```
+
+
